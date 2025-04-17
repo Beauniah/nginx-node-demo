@@ -26,7 +26,7 @@ jobs:
       - name: SSH into server and deploy
         run: |
           ssh ${{ secrets.AWS_USER }}@${{ secrets.AWS_HOST }} << 'EOF'
-            cd ~/nginx-node-demo
+            cd ~/projects/nginx-node/nginx-node-demo
             git pull origin main
             docker-compose down
             docker-compose up --build -d
